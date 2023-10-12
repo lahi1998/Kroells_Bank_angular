@@ -1,0 +1,41 @@
+nav{
+    background-color: red;
+    border-bottom: rgb(238, 17, 17) solid 2px;
+    margin-top: -2vh;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline;
+}
+
+button{
+    background-color: darkred;
+    border: darkred solid 5px;
+    border-radius: 5px;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    padding: 4px;
+    
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(179, 3, 3);
+    border: rgb(179, 3, 3) solid 5px;
+}
+
+.notification-dot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px; /* Adjust the margin as needed to control the spacing between the icon and the dot */
+  }
+  

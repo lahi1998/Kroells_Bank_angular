@@ -1,0 +1,98 @@
+body{
+    padding: 2%;
+    margin: 0%;
+}
+
+.column {
+    float: left;
+    height: 90vh;
+}
+
+.left {
+    width: 50%;
+    height: auto;
+}
+
+.right {
+    width: 50%;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.CardArea{
+    background-color: #4E4A4A;
+    border: #4E4A4A 1px solid;
+    border-radius: 15px;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 3vh;
+}
+
+.CardText{
+    font-size: medium;
+    color: white;
+}
+
+.CardUL{
+    margin: 0%;
+    padding: 0%;
+}
+
+.CardLI{
+    display: inline;
+}
+
+.CardName{
+
+}
+
+.CardExpireDate{
+    margin-left: 54%;
+}
+
+.CardNumberBacking{
+    background-color: white;
+    margin-left: 55%;
+}
+
+.CardNumber{
+    color: black;
+    font-size: medium;
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.BankNavn{
+
+}
+
+.KreditText{
+    margin-left: 90%;
+}
+
+.ProfileArea{
+    background-color: #7e7e7e;
+    border: #838282 solid 2px;
+    border-radius: 10px;
+    color: white;
+    width: 30%;
+}
+
+.TransactionArea{
+    background-color: #7e7e7e;
+    border: #838282 solid 2px;
+    border-radius: 10px;
+    color: white;
+    width: 30%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.profileText{
+    padding: 5px;
+}

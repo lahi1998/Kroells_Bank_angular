@@ -1,0 +1,90 @@
+<app-menu></app-menu>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kroells Bank</title>
+</head>
+
+<body>
+
+  <div class="column left">
+
+    <!-- Card -->
+    <div class="CardArea">
+
+      <p class="CardText BankNavn">Kroells Bank</p>
+
+      <p class="CardText KreditText">Kredit</p>
+
+      <div class="CardNumberBacking">
+        <div></div>
+        <p class="CardNumber" *ngFor="let card  of cardInfo">
+          {{ card.card_Nr }}
+        </p>
+      </div>
+
+      <ul class="CardUL">
+        <li class="CardText CardLI CardName" *ngFor="let card  of cardInfo">
+          {{ card.client_Name }}
+        </li>
+        <li class="CardText CardLI CardExpireDate" *ngFor="let card  of cardInfo">
+          {{ card.expire_Date | date:'yy-MM-dd' }}
+        </li>
+      </ul>
+
+    </div>
+
+    <!-- Profile -->
+    <div class="ProfileArea">
+      <p class="profileText" *ngFor="let profil  of profile">
+        Navn : {{ profil.client_Name }}
+      </p>
+      <p class="profileText" *ngFor="let profil  of profile">
+        Vej : {{ profil.street }}
+      </p>
+      <p class="profileText" *ngFor="let profil  of profile">
+        Nr : {{ profil.house_Nr }}
+      </p>
+      <p class="profileText" *ngFor="let profil  of profile">
+        Postnummer : {{ profil.zip_Code }}
+      </p>
+      <p class="profileText" *ngFor="let profil  of profile">
+        Job : {{ profil.job_Name }}
+      </p>
+      <p class="profileText" *ngFor="let profil  of profile">
+        Indkomst : {{ profil.income }}
+      </p>
+    </div>
+
+  </div>
+
+  <div class="column right">
+
+    <!-- Balance display -->
+    <h2 style="margin-left: 6.5vw;">Balance</h2>
+    <p style="margin-left: 4vw; text-align: center; padding: 20px; background-color: lightseagreen; width: 15%; border: lightseagreen solid 2px; border-radius: 10px;"
+      *ngFor="let card  of cardInfo">
+      {{ card.balance }}
+    </p>
+
+    <!-- display transfers in a list -->
+    <h2 style="margin-left: 5vw;">Transactioner</h2>
+    <ul class="TransactionArea" *ngFor="let transaction of transactions">
+      <li style="text-align: center;">{{ transaction.dateTime | date:'yy-MM-dd HH:mm' }}</li>
+      <li style="display: inline;  ">{{ transaction.accountId }}</li>
+      <li style="display: inline; margin-left: 7vw;"><span
+          [ngStyle]="{'color': transaction.amount >= 0 ? 'lightgreen' : 'red'}">{{ transaction.amount }}</span></li>
+      <br>
+    </ul>
+
+
+
+  </div>
+</body>
+
+</html>
